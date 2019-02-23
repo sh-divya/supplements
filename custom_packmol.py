@@ -3,12 +3,14 @@ import os
 
 def custom_packmol_coords(packmol_custom_string):
     
-    packmol_string_list = packmol_custom_string.split('_').split('\n')
-    packmol_output = [packmol_string_list[i+1] for i, word in enumerate(packmol_string_list) if words == 'output']
-
     temp = open('temp.inp', 'a')
     temp.write(packmol_custom_string)
     temp.close()
+
+    packmol_string_list = [line for line in packmol_custom_string.split('\n')]
+    packmol_string_list = ' '.join(packmol_string_list)
+    packmol_string_list = packmol_string_list.split(' ')
+    packmol_output = [packmol_string_list[i+1] for i, word in enumerate(packmol_string_list) if word == 'output']
 
     temp_file_path = os.path.abspath('temp.inp')
     os.system(packmol_path + ' < ' + temp_file_path)
