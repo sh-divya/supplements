@@ -13,7 +13,7 @@ def custom_packmol_coords(packmol_custom_string):
     packmol_output = [packmol_string_list[i+1] for i, word in enumerate(packmol_string_list) if word == 'output']
 
     temp_file_path = os.path.abspath('temp.inp')
-    os.system(packmol_path + ' < ' + temp_file_path)
+    os.system(sysconst.packmol_path + ' < ' + temp_file_path)
     packmol_coords = open(packmol_output).read()
 
     os.system('rm temp.inp')
