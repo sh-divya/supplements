@@ -14,9 +14,9 @@ def tb_P_inv(x_data, y_data, bin_size, fit_start, fit_stop):
         sig_int_2 = 0
         start = 0
         stop = interval
-        tb = time[stop-1] - time[start]
-        while stop < len(time):
-            sig_int_2 += (np.mean(energy[start:stop]) - glob_avg)**2
+        tb = x_data[stop-1] - x_data[start]
+        while stop < len(x_data):
+            sig_int_2 += (np.mean(y_data[start:stop]) - glob_avg)**2
             start += interval
             stop += interval
             n_b += 1
