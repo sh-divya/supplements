@@ -21,9 +21,9 @@ def get_com(molecule, types):
 
     return(com_x, com_y, com_z)
     
-def get_rg(mol):
+def get_rg(mol, types):
 
-    (c_x, c_y, c_z) = get_com(mol)
+    (c_x, c_y, c_z) = get_com(mol, types)
     rx_2 = 0
     ry_2 = 0
     rz_2 = 0
