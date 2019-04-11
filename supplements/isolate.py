@@ -35,7 +35,7 @@ def isolate_gen(types, dump_obj, mol_len):
 		words = line.split()
 
 		if count == mol_len:
-			yield atom_list
+			yield atoms_list
 			count = 0
 			atoms_list = []
 

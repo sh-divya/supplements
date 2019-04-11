@@ -2,9 +2,9 @@ import os
 
 class helper(object):
 
-	def __init__(self):
+	def __init__(self, opls_path):
 
-		self.oplsObj = open('/home-net/home-1/dsharm23@jhu.edu/my_scratch/squid/forcefield_parameters/oplsaa.prm')
+		self.oplsObj = open(opls_path)
 
 	def readCML(self, cml_file):
 
