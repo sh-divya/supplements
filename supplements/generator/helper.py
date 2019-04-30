@@ -2,7 +2,7 @@ import os
 
 class helper(object):
 
-	def __init__(self, opls_path):
+	def __init__(self, opls_path = '/scratch/users/dsharm23@jhu.edu/oplsaa.prm'):
 
 		self.oplsObj = open(opls_path)
 
