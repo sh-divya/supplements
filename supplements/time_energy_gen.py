@@ -1,4 +1,4 @@
-def read_log_or_out(fileObj):
+def read_log_or_out(fileObj, thermo_output_list):
 
     flag = False
     for line in fileObj:
@@ -8,7 +8,7 @@ def read_log_or_out(fileObj):
                 flag = False
             if flag:
                 yield (int(data[0]), float(data[1]))
-            if data[0] == 'Time' and data[1] == 'TotEng':
+            if data == thermo_output_list:
                 flag = True
         except (IndexError, ValueError):
             pass
