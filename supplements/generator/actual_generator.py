@@ -1,4 +1,5 @@
 from supplements.generator import helper
+from supplements.generator import paraGen
 
 class system_opls_lammps(object):
     
@@ -10,4 +11,30 @@ class system_opls_lammps(object):
         self.helper_obj = helper.helper(opls_file_path)
         self.vdw, self.bond, self.angle, self.torsion, self.charge = self.helper_obj.readOPLS()
 
-    def generate_parameter_objects(self, molGen_objects_for_paras)
+    def generate_parameter_objects(self, molGen_objects_for_paras, dictionary_with_atom_ids):
+        
+        self.para_objects = []
+
+        for molecule in molGen_objects_for_paras:
+
+            self.para_objects.append(paraGen.paraGen(molecule.getAtoms(), molecule.getBonds(), molecule.getAngles(), molecule.getDiheds(), atomIDs))
+
+        for para in para_objects;
+            para.bondTypegen(self.bond)
+            para.angleTypeGen(self.angle)
+            para.dihedTypeGen(self.torsion)
+
+    def create_master_lists():
+
+        self.masterBonds = []
+        self.masterAngles = []
+        self.masterDiheds = []
+
+        bcount = 1
+        acount = 1
+        dcount = 1
+        
+        for obj in self.pata_objects:
+            
+            for b in obj.getBondTypes:
+                self.master
