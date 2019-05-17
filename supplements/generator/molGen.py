@@ -168,11 +168,6 @@ class molGen(object):
 			ats[3] = charge[lrID]
 			i = i + 1
 
-    def set_charges_man(self, charges):
-        
-    for a, ats in enumerate(self.atoms):
-        ats[3] = charges
-
 	def getNum(self):
 
 		return self.number
