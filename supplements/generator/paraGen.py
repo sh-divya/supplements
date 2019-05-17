@@ -160,7 +160,7 @@ class paraGen(object):
 					flag = True
 
 			if not flag:
-				temp_final_diheds.append([0, 0, 0, 0, dih[0], dih[1], dih[2], dih[3]])
+				temp_final_diheds.append([100, 100, 100, 100, dih[0], dih[1], dih[2], dih[3]])
 				#print(temp_final_diheds[-1])
 
 		'''for dih in no_duplicates:
