@@ -1,6 +1,6 @@
 import numpy as np
 
-def dihedral_energy(*coeffs, theta = [i for i in range(0, 370, 10)]):
+def dihedral_energy(coeffs, theta = [i for i in range(0, 370, 10)]):
     
     energy_values = []
     for angle in theta:
