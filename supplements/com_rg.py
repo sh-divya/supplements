@@ -2,7 +2,7 @@ import math
 from squid import structures, units
 
 
-def get_rg(mol, types):
+def get_rg(mol):
 
     (c_x, c_y, c_z) = mol.get_center_of_mass()
     rx_2 = 0
