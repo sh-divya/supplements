@@ -39,3 +39,20 @@ def get_rg(mol, types):
     rg = math.sqrt((rx_2 + ry_2 + rz_2)/mol_wt)
 
     return rg
+
+def ellipsoid(frame):
+	
+	(A,c) = geometry.mvee(frame, tol = 0.01)
+	(U, Q, V) = np.linalg.svd(A)
+	vol  = (4/3.) * np.pi * np.sqrt(1/np.product(Q))
+	
+	return Q
+
+def get_aspect_ratio(frames):
+    
+    aspect_ratio = []
+    for f in frames: 
+        abc = 1/(np.sqrt(ellipsoid(f)))
+        aspect_ratio.append(max(abc)/min(abc))
+
+    return aspect_ratio
