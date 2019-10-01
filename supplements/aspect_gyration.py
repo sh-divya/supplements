@@ -10,7 +10,7 @@ def get_rg(mol):
     rz_2 = 0
     mol_wt = 0
     for atom in mol.atoms:
-        m_i = units.elem_weight(atom.element)
+        m_i = utils.elem_weight(atom.element)
         mol_wt += m_i 
         (x_i, y_i, z_i) = atom.flatten()
         rx_2 += m_i*((x_i-c_x)**2)
