@@ -1,6 +1,7 @@
 import math
 import numpy as np
 from squid import structures
+from squid import geometry
 from squid.utils import units
 
 
