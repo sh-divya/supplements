@@ -32,11 +32,9 @@ def ellipsoid(frame):
 	
 	return Q
 
-def get_aspect_ratio(frames):
+def get_aspect_ratio(frame):
     
-    aspect_ratio = []
-    for f in frames: 
-        abc = 1/(np.sqrt(ellipsoid(f)))
-        aspect_ratio.append(max(abc)/min(abc))
+    abc = 1/(np.sqrt(ellipsoid(frame)))
+    aspect_ratio = max(abc)/min(abc)
 
     return aspect_ratio
