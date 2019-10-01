@@ -1,4 +1,5 @@
 import math
+import numpy as np
 from squid import structures
 from squid.utils import units
 
