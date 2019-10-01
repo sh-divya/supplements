@@ -1,5 +1,5 @@
 import math
-from squid import structures, units
+from squid import structures, utils
 
 
 def get_rg(mol):
